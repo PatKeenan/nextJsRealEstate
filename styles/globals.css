@@ -1,16 +1,55 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
-  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+*:focus {
+  outline: none !important;
+}
+
+.blue-bg {
+  background: #02244b;
+  background-color: #02244b;
+}
+.navigationLink {
+  @apply rounded-lg;
+  border: 1px solid #02244b00;
+}
+.hoverNonActiveNav:hover {
+  border: 1px solid #02244b42;
+  background-color: rgba(211, 211, 211, 0.281);
+}
+.navlinkActive {
+  border: 1px solid #02244b;
+}
+.navigation .blue-text {
+  color: #02244b;
+}
+.light-gray-bg {
+  background-color: #999999;
+  background: #999999;
+}
+.light-gray-text {
+  color: #999999;
+}
+.dark-gray-bg {
+  background-color: #666666;
+  background: #666666;
+}
+.dark-gray-text {
+  color: #666666;
+}
+
+/* Buttons */
+.btn {
+  @apply py-2 px-4 shadow-lg rounded-lg active:scale-95 transform transition ease-in-out duration-75;
+}
+.btn-primary {
+  @apply text-white blue-bg;
+}
+.btn-secondary {
+  @apply blue-text;
+  background: rgb(204, 204, 204);
 }
